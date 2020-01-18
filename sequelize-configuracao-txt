@@ -1,0 +1,11 @@
+yarn add sequelize
+yarn add sequelize-cli -D
+
+Arquivo .sequelizerc fala onde vai estar nossa pasta de migrations, onde vai estar nosso banco de dados e arquivo de conexão.
+
+Usando postgres deve instalar tambem para o sequelize funcionar bem:
+yarn add pg pg-hstore
+
+No Mysql é o tedious
+
+yarn add tedious
