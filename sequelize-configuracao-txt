@@ -9,3 +9,12 @@ yarn add pg pg-hstore
 No Mysql é o tedious
 
 yarn add tedious
+
+Criar uma migration
+yarn sequelize migration:create --name=create-users -criar migration
+
+yarn sequelize db:migrate - executar migration
+
+yarn sequelize db:migrate:undo - desfaz a ultima migration realizada
+
+yarn sequelize db:migrate:undo:all - desfaz todas as migrations
