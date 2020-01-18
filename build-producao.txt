@@ -1,0 +1,4 @@
+Passos necessários caso de erro no build em produção, por estar usando import/export no Nodejs
+
+"build": "sucrase ./src -d ./dist --transforms imports",
+"start": "node dist/server.js"
