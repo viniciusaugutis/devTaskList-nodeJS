@@ -5,9 +5,10 @@
   "license": "MIT",
   "scripts": {
     "dev": "nodemon --exec sucrase-node src/server.js",
-    "build": "set NODE_ENV=production&& sucrase ./src -d ./dist --transforms imports",
+    "prod": "set NODE_ENV=production&& sucrase ./src -d ./dist --transforms imports",
+    "build": "sucrase ./src -d ./dist --transforms imports",
     "postbuild": "yarn sequelize db:migrate",
-    "start": "set NODE_ENV=production&& node dist/server.js"
+    "start": "node dist/server.js"
   },
   "engines": {
     "node": "12.13.1"
