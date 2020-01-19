@@ -5,11 +5,12 @@
   "license": "MIT",
   "scripts": {
     "dev": "nodemon --exec sucrase-node src/server.js",
-    "build": "sucrase ./src -d ./dist --transforms imports",
-    "start": "node dist/server.js"
+    "build": "set NODE_ENV=production&& sucrase ./src -d ./dist --transforms imports",
+    "postbuild": "yarn sequelize db:migrate",
+    "start": "set NODE_ENV=production&& node dist/server.js"
   },
   "engines": {
-    "node": "12.3.1"
+    "node": "12.13.1"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -19,7 +20,9 @@
     "pg": "^7.17.1",
     "pg-hstore": "^2.3.3",
     "sequelize": "^5.21.3",
-    "yup": "^0.28.0"
+    "yup": "^0.28.0",
+    "custom-env": "^1.0.2",
+    "dotenv": "^8.2.0"
   },
   "devDependencies": {
     "eslint": "^6.8.0",
