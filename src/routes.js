@@ -8,6 +8,10 @@ import TaskController from './app/controllers/TaskController';
 
 const routes = new Router();
 
+routes.get('/', (req, res) => {
+  return res.json({ ok: true });
+});
+
 routes.post('/users', UserController.store);
 
 routes.post('/sessions', SessionController.store);
