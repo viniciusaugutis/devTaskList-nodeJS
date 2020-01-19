@@ -55,6 +55,7 @@ module.exports = {
 Depois disso instalar a extensão Prettier, para formatação do documento.
 Instala ela no VSCode e vai no cmd para instalar plugin do prettier junto com Eslint:
 yarn add prettier eslint-config-prettier eslint-plugin-prettier -D
+npm install prettier eslint-config-prettier eslint-plugin-prettier -D
 
 E depois atualiza o arquivo .eslintrc.js
 
